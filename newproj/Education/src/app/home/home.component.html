@@ -28,20 +28,21 @@
                 <ul class="nav-menu">
                   <li><a href="index.html">Home</a></li>
                   <li><a href="../about/">About</a></li>
-                  <li><a href="courses.html">Courses</a></li>
+                  <li><a href="../courses/">Courses</a></li>
                   <li class="menu-has-children"><a href="">New User </a>
                     <ul>
-                      <li><a href="#">Sign Up</a></li>
+                      <li><a onclick="myfunction4()">Sign Up as New User</a></li>
+                      <li><a onclick="myfunction5()">Sign Up as New Mentor</a></li>
                       
                     </ul>
                   </li>	
                  
                   <li class="menu-has-children"><a href="">Login</a>
                     <ul>
-                          <li><a onclick="myfunction()">As Admin</a></li>	
+                          <li><a onclick="myfunction1()">As Admin</a></li>	
                           
-                          <li><a href="event-details.html">As User</a></li>		
-                        <li><a href="elements.html">As Trainer</a></li>
+                          <li><a onclick="myfunction2()">As User</a></li>		
+                        <li><a onclick="myfunction3()">As Trainer</a></li>
                           	                		
                     </ul>
                   </li>					          					          		          
@@ -477,36 +478,24 @@
                     </div>											
                 </div>
                 <div class="footer-bottom row align-items-center justify-content-between">
-                    <!-- <p class="footer-text m-0 col-lg-6 col-md-12"> Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. 
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. </p>
-                    <div class="col-lg-6 col-sm-12 footer-social">
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-dribbble"></i></a>
-                        <a href="#"><i class="fa fa-behance"></i></a>
-                    </div> -->
+                  
                 </div>						
             </div>
         </footer>	
         <!-- End footer Area -->	
 
-<div id="id01" class="modal">
-    <form class="container model-content">
-            <section class="sample-app-content">
-                    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
 
-<div id="id01" class="modal">
+<div id="id01" class="modal" style="width: 50%;position: absolute;margin-left: auto;margin-right: auto;">
   
-  <form class="modal-content animate" action="/action_page.php" method="post">
+  <form class="modal-content animate"  method="post" style="padding: 0px;margin-top: 100px;">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      <img src="../../assets/avatar.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="uname"><b>Admin ID</b></label>
+      <input type="text" placeholder="Enter AdminId" name="aname" required>
 
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
@@ -516,54 +505,156 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
     </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+    </form>
     </div>
-  </form>
-</div>
-<form class="modal-content animate" action="/action_page.php" style="padding: 20%">
-    <div class="imgcontainer">
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    <div id="id02" class="modal" style="width: 50%;position: absolute;margin-left: auto;margin-right: auto;">
+  
+        <form class="modal-content animate"  method="post" style="padding: 0px;margin-top: 100px;">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="../../assets/avatar.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>User ID</b></label>
+            <input type="text" placeholder="Enter UserId" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button [routerLink]="['/course-details']" type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+        </form>
     </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
+    <div id="id03" class="modal" style="width: 50%;position: absolute;margin-left: auto;margin-right: auto;">
+          <form class="modal-content animate"  method="post" style="padding: 0px;margin-top: 100px;">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="../../assets/avatar.png" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Mentor ID</b></label>
+            <input type="text" placeholder="Enter MentorId" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+              
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+        </form>
     </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+    <!--form-->
+    <div id="id04" class="modal" style="width: 50%;position: absolute;margin-left: auto;margin-right: auto;">
+       <form class="modal-content animate"  method="post" style="padding: 0px;margin-top: 100px;">
+           <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+    
+            <h2 class="form-signin-heading">
+                Registration</h2>
+                <br/>
+            <label for="txtUsername">
+                Username</label>
+            <input name="txtUsername" type="text" id="txtUsername" class="form-control" placeholder="Enter Username"
+                required />
+            <br />
+            <label for="txtPassword">
+                Password</label>
+            <input name="txtPassword" type="password" id="txtPassword" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number"
+                class="form-control" placeholder="Enter Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" />
+            <br />
+            <label for="txtConfirmPassword">
+                Confirm Password</label>
+            <input name="txtConfirmPassword" type="password" id="txtConfirmPassword" class="form-control"
+                placeholder="Confirm Password" />
+            <br />
+            <label for="txtEmail">
+                Email</label>
+            <input name="txtEmail" id="txtEmail" class="form-control" placeholder="Enter Email"
+                required type="email" />
+            <hr />
+            <input type="submit" name="btnSignup" value="Sign up" id="btnSignup" class="btn btn-primary" />
+            </form>
     </div>
-  </form>
-                    <!-- <div class="container" style="padding: 30%">
-                            <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" required>
-                        
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required>
-                        
-                            <button type="submit">Login</button>
-                            <label>
-                              <input type="checkbox" checked="checked" name="remember"> Remember me
-                            </label>
-                    </div>
-                        
-                    <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                    </div>-->
-            </section>
-                
-        </form>  
-    </div>                      
+        <form class="modal-content animate"  method="post" style="padding: 0px;margin-top: 100px;">
+        <script type="text/javascript">
+            window.onload = function () {
+                var txtPassword = document.getElementById("txtPassword");
+                var txtConfirmPassword = document.getElementById("txtConfirmPassword");
+                txtPassword.onchange = ConfirmPassword;
+                txtConfirmPassword.onkeyup = ConfirmPassword;
+                function ConfirmPassword() {
+                    txtConfirmPassword.setCustomValidity("");
+                    if (txtPassword.value != txtConfirmPassword.value) {
+                        txtConfirmPassword.setCustomValidity("Passwords do not match.");
+                    }
+                }
+            }
+        </script>  
+        </form>
+        <div id="id05" class="modal" style="width: 50%;position: absolute;margin-left: auto;margin-right: auto;">
+            <form class="modal-content animate"  method="post" style="padding: 0px;margin-top: 100px;">
+                <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
+         
+                 <h2 class="form-signin-heading">
+                     Registration</h2>
+                     <br/>
+                 <label for="txtUsername">
+                     Username</label>
+                 <input name="txtUsername" type="text" id="txtUsername" class="form-control" placeholder="Enter Username"
+                     required />
+                 <br />
+                 <label for="txtPassword">
+                     Password</label>
+                 <input name="txtPassword" type="password" id="txtPassword" title="Password must contain: Minimum 8 characters atleast 1 Alphabet and 1 Number"
+                     class="form-control" placeholder="Enter Password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" />
+                 <br />
+                 <label for="txtConfirmPassword">
+                     Confirm Password</label>
+                 <input name="txtConfirmPassword" type="password" id="txtConfirmPassword" class="form-control"
+                     placeholder="Confirm Password" />
+                 <br />
+
+                 <label for="txtEmail">
+                     Email</label>
+                 <input name="txtEmail" id="txtEmail" class="form-control" placeholder="Enter Email"
+                     required type="email" />
+                     <br/>
+                     <label for="Qualification">
+                        Qualification</label>
+                    <input name="txtqual" type="text" id="txtqual" class="form-control" placeholder="Enter Qualification"
+                        required />
+                    <br />
+                    <br/>
+                    <label for="Experience">
+                        Experience</label>
+                   <input name="txtexp" type="text" id="txtexp" class="form-control" placeholder="Enter Experience"
+                       required />
+                   <br />
+                 <hr />
+                 <input type="submit" name="btnSignup" value="Sign up" id="btnSignup" class="btn btn-primary" />
+                 </form>
+         </div>
+             <form class="modal-content animate"  method="post" style="padding: 0px;margin-top: 100px;">
+             <script type="text/javascript">
+                 window.onload = function () {
+                     var txtPassword = document.getElementById("txtPassword");
+                     var txtConfirmPassword = document.getElementById("txtConfirmPassword");
+                     txtPassword.onchange = ConfirmPassword;
+                     txtConfirmPassword.onkeyup = ConfirmPassword;
+                     function ConfirmPassword() {
+                         txtConfirmPassword.setCustomValidity("");
+                         if (txtPassword.value != txtConfirmPassword.value) {
+                             txtConfirmPassword.setCustomValidity("Passwords do not match.");
+                         }
+                     }
+                 }
+             </script>  
+             </form>
+
+    <!--  -->

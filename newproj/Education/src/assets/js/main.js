@@ -419,12 +419,34 @@ $(document).ready(function() {
     });
 
 });
-function myfunction(){
+function myfunction1(){
     document.getElementById("id01").style.display="block";
+    document.getElementById("id02").style.display="none";
+    document.getElementById("id03").style.display="none";
 } 
-var modal=document.getElementById('id01');
-window.onclick=function(event){
-    if(event.target==modal){
-        this.modal.style.display="none";
-    }
+
+function myfunction2(){
+    document.getElementById("id02").style.display="block";
+    document.getElementById("id01").style.display="none";
+    document.getElementById("id03").style.display="none";
+} 
+function myfunction3(){
+    document.getElementById("id03").style.display="block";
+    document.getElementById("id01").style.display="none";
+    document.getElementById("id02").style.display="none";
+}
+function myfunction4()
+{
+document.getElementById("id04").style.display="block";
+document.getElementById("id01").style.display="none";
+document.getElementById("id02").style.display="none";
+document.getElementById("id03").style.display="none";
+}
+function myfunction5()
+{
+    document.getElementById("id05").style.display="block";
+document.getElementById("id01").style.display="none";
+document.getElementById("id02").style.display="none";
+document.getElementById("id03").style.display="none";
+document.getElementById("id04").style.display="none";
 }
